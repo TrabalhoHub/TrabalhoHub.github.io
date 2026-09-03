@@ -208,4 +208,27 @@ Usar o Prompt Mestre do guia para cada artigo, substituindo:
 
 Exemplo para o primeiro artigo:
 - TEMA: Reserva de emergência
+
+---
+
+## Status dos Artigos
+
+### Concluídos (5/15)
+✅ 1. Como Montar uma Reserva de Emergência em 2026 (artigo-reserva.html)
+✅ 2. Guia Completo: Como Investir em Ações (artigo-acoes.html)
+✅ 3. 10 Formas de Ganhar Dinheiro Online (artigo-renda-extra.html)
+✅ 4. Bitcoin: Vale a Pena Investir? (artigo-bitcoin.html)
+✅ 5. Onde Investir em Setembro de 2026? (artigo-onde-investir-setembro.html)
+
+### Pendentes (10/15)
+⏳ 6. Orçamento Pessoal: Como Controlar Suas Finanças do Zero
+⏳ 7. Renda Fixa: O Guia Completo para Iniciantes
+⏳ 8. Tesouro Direto: Como Investir e Qual Melhor Título
+⏳ 9. CDB vs LCI vs LCA: Qual Rende Mais em 2026?
+⏳ 10. Planejamento Financeiro para Casais
+⏳ 11. Como Criar um Plano de Aposentadoria
+⏳ 12. FGTS: Como Usar seu Dinheiro de Forma Inteligente
+⏳ 13. Imposto de Renda: Como Pagar Menos em 2026
+⏳ 14. Fundos Imobiliários: O Guia Completo
+⏳ 15. ETFs: Como Investir em Índices da Bolsa
 - PALAVRA-CHAVE: reserva de emergência
