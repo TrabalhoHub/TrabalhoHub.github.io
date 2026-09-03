@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com o Finanças Inteligentes. Tire suas dúvidas, sugira temas ou faça parcerias.">
+    
+    <title>Fale Conosco | Finanças Inteligentes</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">💰</span>
+                <span class="logo-text">Finanças Inteligentes</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="index.html#renda-fixa" class="nav-link">Renda Fixa</a>
+                <a href="index.html#planejamento" class="nav-link">Planejamento</a>
+                <a href="index.html#renda-variavel" class="nav-link">Renda Variável</a>
+                <a href="contato.html" class="nav-link">Contato</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="page-content">
+            <div class="container">
+                <h1>Fale Conosco</h1>
+                
+                <div class="content-text">
+                    <p class="lead">Tem alguma dúvida, sugestão ou quer fazer uma parceria? Entre em contato conosco!</p>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-form-container">
+                            <h2>Envie sua mensagem</h2>
+                            
+                            <form class="contact-form" id="contact-form">
+                                <div class="form-group">
+                                    <label for="nome">Nome *</label>
+                                    <input type="text" id="nome" name="nome" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">E-mail *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="assunto">Assunto *</label>
+                                    <select id="assunto" name="assunto" required>
+                                        <option value="">Selecione o assunto</option>
+                                        <option value="duvida">Dúvida</option>
+                                        <option value="sugestao">Sugestão de tema</option>
+                                        <option value="parceria">Parceria</option>
+                                        <option value="erro">Reportar erro</option>
+                                        <option value="outro">Outro</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="mensagem">Mensagem *</label>
+                                    <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="submit-button">Enviar Mensagem</button>
+                            </form>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <h2>Outros canais</h2>
+                            
+                            <div class="info-item">
+                                <h3>📱 WhatsApp</h3>
+                                <p>Para contato rápido, envie uma mensagem:</p>
+                                <a href="https://wa.me/5511999999999" class="whatsapp-button" target="_blank">
+                                    Enviar WhatsApp
+                                </a>
+                            </div>
+                            
+                            <div class="info-item">
+                                <h3>📸 Instagram</h3>
+                                <p>Siga-nos para conteúdo diário:</p>
+                                <a href="#" class="social-link">@financasinteligentes</a>
+                            </div>
+                            
+                            <div class="info-item">
+                                <h3>🎥 YouTube</h3>
+                                <p>Vídeos semanais sobre finanças:</p>
+                                <a href="#" class="social-link">Finanças Inteligentes</a>
+                            </div>
+                            
+                            <div class="info-item">
+                                <h3>📧 E-mail</h3>
+                                <p>contato@financas-inteligentes.com</p>
+                            </div>
+                            
+                            <div class="faq-mini">
+                                <h3>📝 Perguntas Frequentes</h3>
+                                <ul>
+                                    <li><strong>Posso sugerir temas?</strong> Sim! Use o formulário acima.</li>
+                                    <li><strong>Fazem consultoria?</strong> Não trabalhamos com consultoria individual.</li>
+                                    <li><strong>Como anunciar?</strong> Envie um e-mail com sua proposta.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Finanças Inteligentes</h4>
+                    <p>Seu portal de referência em dicas de finanças pessoais e investimentos.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li><a href="index.html#renda-fixa">Renda Fixa</a></li>
+                        <li><a href="index.html#planejamento">Planejamento</a></li>
+                        <li><a href="index.html#renda-variavel">Renda Variável</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="quem-somos.html">Quem Somos</a></li>
+                        <li><a href="contato.html">Fale Conosco</a></li>
+                        <li><a href="privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos.html">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="YouTube">🎥</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Finanças Inteligentes. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="privacidade.html">Política de Privacidade</a>
+                    <a href="termos.html">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Formulário de contato
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.target);
+                const data = Object.fromEntries(formData);
+                
+                // Simular envio
+                alert(`Obrigado, ${data.nome}! Sua mensagem foi enviada. Responderemos em breve.`);
+                e.target.reset();
+            });
+        }
+    </script>
+</body>
+</html>
