@@ -213,16 +213,16 @@ Exemplo para o primeiro artigo:
 
 ## Status dos Artigos
 
-### Concluídos (6/15)
+### Concluídos (7/15)
 ✅ 1. Como Montar uma Reserva de Emergência em 2026 (artigo-reserva.html)
 ✅ 2. Guia Completo: Como Investir em Ações (artigo-acoes.html)
 ✅ 3. 10 Formas de Ganhar Dinheiro Online (artigo-renda-extra.html)
 ✅ 4. Bitcoin: Vale a Pena Investir? (artigo-bitcoin.html)
 ✅ 5. Onde Investir em Setembro de 2026? (artigo-onde-investir-setembro.html)
 ✅ 6. Orçamento Pessoal: Como Controlar Suas Finanças do Zero (artigo-orcamento-pessoal.html)
+✅ 7. Renda Fixa: O Guia Completo para Iniciantes (artigo-renda-fixa.html)
 
-### Pendentes (9/15)
-⏳ 7. Renda Fixa: O Guia Completo para Iniciantes
+### Pendentes (8/15)
 ⏳ 8. Tesouro Direto: Como Investir e Qual Melhor Título
 ⏳ 9. CDB vs LCI vs LCA: Qual Rende Mais em 2026?
 ⏳ 10. Planejamento Financeiro para Casais
