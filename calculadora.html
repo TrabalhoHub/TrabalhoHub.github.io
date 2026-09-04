@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora de juros compostos gratuita. Calcule o rendimento dos seus investimentos e veja quanto seu dinheiro pode crescer.">
+    
+    <title>Calculadora de Juros Compostos | Finanças Inteligentes</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .calculator-section {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            margin: 40px 0;
+            border-radius: 12px;
+        }
+        .calculator-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .calculator-title {
+            text-align: center;
+            color: #1a5276;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #1a5276;
+        }
+        .form-group input::placeholder {
+            color: #999;
+        }
+        .btn-calculate {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #1a5276 0%, #2e86c1 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .btn-calculate:hover {
+            transform: translateY(-2px);
+        }
+        .result-container {
+            margin-top: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 12px;
+            color: white;
+            display: none;
+        }
+        .result-container.show {
+            display: block;
+        }
+        .result-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+        .result-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .result-item {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .result-item label {
+            display: block;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        .result-item span {
+            font-size: 1.4em;
+            font-weight: 700;
+        }
+        .result-total {
+            grid-column: 1 / -1;
+            background: rgba(255,255,255,0.3);
+            padding: 20px;
+            text-align: center;
+        }
+        .result-total span {
+            font-size: 2em;
+        }
+        .info-text {
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+        .tips-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .tips-section h2 {
+            color: #1a5276;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .tip-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .tip-card h3 {
+            color: #1a5276;
+            margin-top: 0;
+        }
+        .formula-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .formula-box {
+            background: #eaf2f8;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .formula-box h3 {
+            color: #1a5276;
+            margin-top: 0;
+        }
+        .formula {
+            font-size: 1.2em;
+            color: #2874a6;
+            font-weight: 600;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">💰</span>
+                <span class="logo-text">Finanças Inteligentes</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="index.html#renda-fixa" class="nav-link">Renda Fixa</a>
+                <a href="index.html#planejamento" class="nav-link">Planejamento</a>
+                <a href="index.html#renda-variavel" class="nav-link">Renda Variável</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="calculator-section">
+                <h1 class="calculator-title">Calculadora de Juros Compostos</h1>
+                
+                <div class="calculator-container">
+                    <form id="compound-form">
+                        <div class="form-group">
+                            <label for="initial">Valor Inicial (R$)</label>
+                            <input type="number" id="initial" placeholder="Ex: 1000" min="0" step="0.01" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="monthly">Aporte Mensal (R$)</label>
+                            <input type="number" id="monthly" placeholder="Ex: 200" min="0" step="0.01" value="0">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="rate">Taxa de Juros ao Mês (%)</label>
+                            <input type="number" id="rate" placeholder="Ex: 1" min="0" step="0.01" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="time">Período (meses)</label>
+                            <input type="number" id="time" placeholder="Ex: 12" min="1" required>
+                        </div>
+                        
+                        <button type="submit" class="btn-calculate">Calcular</button>
+                    </form>
+                    
+                    <div class="result-container" id="result">
+                        <div class="result-title">Resultado</div>
+                        
+                        <div class="result-grid">
+                            <div class="result-item">
+                                <label>Total Investido</label>
+                                <span id="invested">R$ 0,00</span>
+                            </div>
+                            
+                            <div class="result-item">
+                                <label>Juros Ganhos</label>
+                                <span id="interest">R$ 0,00</span>
+                            </div>
+                            
+                            <div class="result-total">
+                                <label>Valor Total</label>
+                                <span id="total">R$ 0,00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="info-text">* Cálculo baseado em juros compostos mensais.</p>
+                </div>
+            </div>
+            
+            <div class="formula-section">
+                <div class="formula-box">
+                    <h3>Fórmula dos Juros Compostos</h3>
+                    <div class="formula">M = P × (1 + i)^n</div>
+                    <p>Onde: M = Montante, P = Capital Inicial, i = Taxa, n = Período</p>
+                </div>
+            </div>
+            
+            <div class="tips-section">
+                <h2>Dicas para Maximizar seus Ganhos</h2>
+                
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h3>📈 Comece Cedo</h3>
+                        <p>Quanto antes você começar, mais tempo seus juros terão para render. O juro composto é poderoso a longo prazo.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h3>💰 Invista Regularmente</h3>
+                        <p>Aportes mensais regulares aumentam muito o resultado final. Mesmo valores pequenos fazem diferença.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h3>🎯 Seja Consistente</h3>
+                        <p>Não resgate seus investimentos antes do prazo. A consistência é a chave do sucesso.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h3>📊 Diversifique</h3>
+                        <p>Não coloque tudo em um só investimento. Diversifique para reduzir riscos e aumentar retornos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Finanças Inteligentes</h4>
+                    <p>Seu portal de referência em dicas de finanças pessoais e investimentos.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li><a href="index.html#renda-fixa">Renda Fixa</a></li>
+                        <li><a href="index.html#planejamento">Planejamento</a></li>
+                        <li><a href="index.html#renda-variavel">Renda Variável</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="quem-somos.html">Quem Somos</a></li>
+                        <li><a href="privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos.html">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <p style="color: #9ca3af; font-size: 14px;">Em breve nas redes sociais</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Finanças Inteligentes. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="privacidade.html">Política de Privacidade</a>
+                    <a href="termos.html">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('compound-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const initial = parseFloat(document.getElementById('initial').value) || 0;
+            const monthly = parseFloat(document.getElementById('monthly').value) || 0;
+            const rate = parseFloat(document.getElementById('rate').value) / 100;
+            const time = parseInt(document.getElementById('time').value) || 0;
+            
+            let total = initial;
+            let invested = initial;
+            
+            for (let i = 0; i < time; i++) {
+                total = total * (1 + rate) + monthly;
+                invested += monthly;
+            }
+            
+            const interest = total - invested;
+            
+            document.getElementById('invested').textContent = formatCurrency(invested);
+            document.getElementById('interest').textContent = formatCurrency(interest);
+            document.getElementById('total').textContent = formatCurrency(total);
+            
+            document.getElementById('result').classList.add('show');
+        });
+        
+        function formatCurrency(value) {
+            return 'R$ ' + value.toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+        }
+    </script>
+</body>
+</html>
