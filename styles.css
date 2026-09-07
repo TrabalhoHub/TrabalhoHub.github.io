@@ -231,10 +231,10 @@ body {
 }
 
 .article-card.featured {
-    grid-column: span 2;
-    grid-row: span 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-column: span 1;
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .article-image {
@@ -246,8 +246,7 @@ body {
 }
 
 .article-card.featured .article-image {
-    height: 100%;
-    min-height: 400px;
+    height: 200px;
 }
 
 .article-image::after {
@@ -356,6 +355,25 @@ body {
 
 .calculator-link .read-more {
     color: var(--accent-color);
+}
+
+/* Ensure featured and calculator have same height */
+.articles-grid .article-card.featured,
+.articles-grid .calculator-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.articles-grid .article-card.featured .article-content,
+.articles-grid .calculator-link .article-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.articles-grid .article-card.featured .article-content p,
+.articles-grid .calculator-link .article-content p {
+    flex: 1;
 }
 
 .calculator-link .article-meta span {
