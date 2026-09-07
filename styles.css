@@ -487,15 +487,13 @@ body {
     gap: 20px;
 }
 
-.calculator-banner-icon {
-    font-size: 36px;
-    background: rgba(255, 255, 255, 0.1);
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.calculator-banner-image {
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
     border-radius: 12px;
+    flex-shrink: 0;
 }
 
 .calculator-banner-text {
@@ -894,7 +892,7 @@ body {
         text-align: center;
     }
     
-    .calculator-banner-icon {
+    .calculator-banner-image {
         margin: 0 auto;
     }
     
