@@ -461,71 +461,6 @@ body {
     opacity: 1;
 }
 
-/* Calculator Banner */
-.calculator-banner {
-    padding: 40px 24px;
-    background: var(--white);
-}
-
-.calculator-banner-link {
-    display: block;
-    text-decoration: none;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #374151 100%);
-    border-radius: 16px;
-    padding: 24px 32px;
-    transition: var(--transition);
-}
-
-.calculator-banner-link:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-.calculator-banner-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.calculator-banner-image {
-    width: 80px;
-    height: 80px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 12px;
-    flex-shrink: 0;
-}
-
-.calculator-banner-text {
-    flex: 1;
-}
-
-.calculator-banner-text h3 {
-    color: var(--white);
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 4px;
-}
-
-.calculator-banner-text p {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 14px;
-}
-
-.calculator-banner-btn {
-    background: var(--accent-color);
-    color: var(--secondary-color);
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
-    transition: var(--transition);
-}
-
-.calculator-banner-link:hover .calculator-banner-btn {
-    background: var(--white);
-}
-
 /* Article Page Styles */
 .article-page {
     padding: 60px 0 100px;
@@ -802,15 +737,6 @@ body {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
     }
-    
-    .calculator-banner-content {
-        flex-wrap: wrap;
-    }
-    
-    .calculator-banner-btn {
-        width: 100%;
-        text-align: center;
-    }
 }
 
 @media (max-width: 768px) {
@@ -885,18 +811,5 @@ body {
 
     .result-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .calculator-banner-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .calculator-banner-image {
-        margin: 0 auto;
-    }
-    
-    .calculator-banner-btn {
-        width: 100%;
     }
 }
