@@ -213,7 +213,7 @@ Exemplo para o primeiro artigo:
 
 ## Status dos Artigos
 
-### Concluídos (10/15)
+### Concluídos (11/15)
 ✅ 1. Como Montar uma Reserva de Emergência em 2026 (artigo-reserva.html)
 ✅ 2. Guia Completo: Como Investir em Ações (artigo-acoes.html)
 ✅ 3. 10 Formas de Ganhar Dinheiro Online (artigo-renda-extra.html)
@@ -224,9 +224,9 @@ Exemplo para o primeiro artigo:
 ✅ 8. Tesouro Direto: Como Investir e Qual Melhor Título (artigo-tesouro-direto.html)
 ✅ 9. CDB vs LCI vs LCA: Qual Rende Mais em 2026? (artigo-cdb-lci-lca.html)
 ✅ 10. Planejamento Financeiro para Casais (artigo-planejamento-casais.html)
+✅ 11. Como Criar um Plano de Aposentadoria do Zero (artigo-aposentadoria.html)
 
-### Pendentes (5/15)
-⏳ 11. Como Criar um Plano de Aposentadoria
+### Pendentes (4/15)
 ⏳ 12. FGTS: Como Usar seu Dinheiro de Forma Inteligente
 ⏳ 13. Imposto de Renda: Como Pagar Menos em 2026
 ⏳ 14. Fundos Imobiliários: O Guia Completo
